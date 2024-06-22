@@ -1,4 +1,7 @@
-# https://shallowsky.com/blog/programming/python-play-chords.html
+# ToDo: Make this interpret chords, as:
+#    play_tune(["C1",["C1","E1","G1"],"EF2",["C1","EF1","G1"],...],300)
+
+# Adapted from: https://shallowsky.com/blog/programming/python-play-chords.html
 
 import pygame, pygame.sndarray
 pygame.mixer.init(channels=1)
@@ -54,6 +57,10 @@ def setup_notes():
     
 setup_notes()
 print(note2freq)
+
+# Simple version doesn't handle playing chords.
+# ToDo: Make this interpret chords, as:
+#    play_tune(["C1",["C1","E1","G1"],"EF2",["C1","EF1","G1"],...],300)
 
 def play_tune(notes,ms=1000):
     global note2freq
