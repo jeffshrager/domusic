@@ -26,10 +26,10 @@ def sine_wave(hz, peak, n_samples=sample_rate):
     return numpy.resize(onecycle, (n_samples,)).astype(numpy.int16)
 
 # Play A (440Hz) for 1 second as a sine wave:
-play_for(sine_wave(440, 4096), 1000)
+#play_for(sine_wave(440, 4096), 1000)
 
 # Chords
-play_for(sum([sine_wave(440, 4096), sine_wave(880, 4096)]), 1000)
+#play_for(sum([sine_wave(440, 4096), sine_wave(880, 4096)]), 1000)
 
 # Label the three octaves around middle C:
 note_names = ["C0", ["CS0", "DF0"], "D0", ["DS0", "EF0"], "E0", "F0", ["FS0", "GF0"], "G0", ["GS0", "AF0"], "A0", ["AS0", "BF0"], "B0",
@@ -62,7 +62,12 @@ def play_tune(notes,ms=1000):
 
 play_tune(["C2","C2","D2","C2","F2","E2","C2","C2","D2","C2","G2","F2"],300)
 
-# Something's wrong with the below. Need to debug at some point.
+# Play a chord by note name
+play_for(sum([sine_wave(note2freq[note], 4096) for note in ["C1","E1","G1"]]), 1000) # C Major
+play_for(sum([sine_wave(note2freq[note], 4096) for note in ["C1","EF1","G1"]]), 1000) # C Minor
+
+# Something's wrong with the below. Need to debug at some point.  It
+# came from the original web site (as at top) but seems to be broken.
 
 def make_chord(hz, ratios):
     """Make a chord based on a list of frequency ratios."""
