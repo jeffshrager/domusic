@@ -1,10 +1,16 @@
 For the moment just copy-paste the code into test.py on your local
-machine.  (Eventually you'll want to use a git interface, like
-sourcetree, but it's such a pita to connect to github that for the
-moment just d/l'ing the code will be fine.)
+machine. (Click on test.py then the [Raw] button at the top, and you
+can copy the code from there and just paste it into a code editor of
+your choice on your local machine and save it in your own local
+domusic folder on your desktop, or whatever.)
 
-You should really use anaconda which manages python environments, but
-you can probably get around with just using your default environment.
+(Eventually you'll want to use a git interface, like sourcetree, but
+it's such a pita to connect to github that for the moment just
+downloading the code will be fine.)
+
+You'll eventually want to use anaconda which manages python
+environments, but you can probably get going with just using your
+default environment.
 
 If you are using anaconda, you'll need to do:
 
